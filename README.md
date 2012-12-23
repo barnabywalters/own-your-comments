@@ -43,3 +43,10 @@ Own Your Comments is built with [kango](http://kangoextensions.com) and as such 
 You need to set the URL of the injected iframes to a URL of your choice. This URL should probably be a "new note/post/status" page on your website. It will be embedded into webpages which have Disqus or Livefyre comments boxes.
 
 In the URL you can use <code>{url}</code> as a placeholder for the URL of the page you’re commenting on — this is really useful for auto-filling in-reply-to fields.
+
+## Usage
+
+Once everything’s set up, you should start seeing things like this happening:
+
+![A custom comments box before a Disqus one](img/disqus.png)
+![A custom comments box before a Livefyre one](img/livefyre.png)
