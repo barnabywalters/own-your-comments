@@ -36,10 +36,12 @@ var OwnYourComments = (function () {
      * Embeds an Indieweb comments box before Disqus or Livefyre iframes
      */
     function embedCommentsBox() {
-        $('iframe[data-disqus-uid]').each(function (i, el) {
+        $('iframe[data-disqus-uid], div#disqus_thread').each(function (i, el) {
             var insertID = 'own-your-comments-embed-' + $(el).attr('data-disqus-uid');
             
-            var insertFrame = $('<iframe />').attr('id', insertID);
+            var insertFrame = $('<iframe />')
+            	.attr('id', insertID)
+            	.css('width', '100%');
             
             var properties = { url: window.location.href };
             
@@ -47,7 +49,9 @@ var OwnYourComments = (function () {
                 $('#' + insertID).attr('src', expandTemplates(url, properties));
             });
             
-            console.log('Inserting:', insertFrame, 'before:', el);
+            getOption('commentEmbedHeight', function (height) {
+            	$('#' + insertID).css('height', height);
+            });
             
             $(el).before(insertFrame);
         });

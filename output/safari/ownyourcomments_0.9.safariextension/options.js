@@ -1,4 +1,4 @@
-function saveURL(evt) {
+function saveOption(evt) {
   kango.invokeAsync('kango.storage.setItem', $(evt.target).attr('id'), evt.target.value);
   
   $('#notice').text('Unsaved Changes Made!').toggleClass('unsaved');
@@ -11,7 +11,7 @@ function main() {
   $('.monitor').each(function () {
     var self = $(this);
     
-    self.keyup(saveURL);
+    self.keyup(saveOption);
     
     kango.invokeAsync('kango.storage.getItem', self.attr('id'), function (url) {
   	  self.val(url);
