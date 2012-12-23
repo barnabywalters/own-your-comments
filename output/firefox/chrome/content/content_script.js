@@ -34,7 +34,7 @@ var OwnYourComments = (function () {
 	/**
 	 * Embeds an Indieweb comments box before Disqus or Livefyre iframes
 	 */
-	function embedCommentsBox(url) {
+	function embedCommentsBox() {
 		$('iframe[data-disqus-uid]').before(function () {
 			var eID = $(this).attr('data-disqus-uid');
 			
@@ -58,6 +58,6 @@ var OwnYourComments = (function () {
 	};
 }());
 
-$(document).ready(function () {
-	
+KangoAPI.onReady(function () {
+	embedCommentsBox();
 });
