@@ -43,7 +43,7 @@ var OwnYourComments = (function () {
      * Embeds an Indieweb comments box before Disqus or Livefyre iframes
      */
     function embedCommentsBox() {
-        $('iframe[data-disqus-uid], div#disqus_thread').each(function (i, el) {
+        $('div#disqus_thread').each(function (i, el) {
             var insertID = uniq('own-your-comments-embed-');
             
             var insertFrame = $('<iframe />')
