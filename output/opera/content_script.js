@@ -3,7 +3,7 @@
 // @include http://*
 // @include https://*
 // @require URI.js
-// @require jquery-1.8.3-min.js
+// @require jquery-1.8.3.min.js
 // ==/UserScript==
 
 var OwnYourComments = (function () {
@@ -31,6 +31,7 @@ var OwnYourComments = (function () {
 	}
 	
 	// Content manipuation functions
+	
 	/**
 	 * Embeds an Indieweb comments box before Disqus or Livefyre iframes
 	 */
@@ -58,6 +59,4 @@ var OwnYourComments = (function () {
 	};
 }());
 
-KangoAPI.onReady(function () {
-	embedCommentsBox();
-});
+embedCommentsBox();
