@@ -9,7 +9,7 @@
 var OwnYourComments = (function () {
 	// Private
 	// Utility functions
-	function getConfig(key, callback) {
+	function getOption(key, callback) {
 		kango.invokeAsync('kango.storage.getItem', key, callback);
 	}
 	
@@ -35,7 +35,21 @@ var OwnYourComments = (function () {
 	 * Embeds an Indieweb comments box before Disqus or Livefyre iframes
 	 */
 	function embedCommentsBox(url) {
-		$()
+		$('iframe[data-disqus-uid]').before(function () {
+			var eID = $(this).attr('data-disqus-uid');
+			
+			var el = $('iframe').attr('id', 'own-your-comments-embed-' + eID);
+			
+			var properties = {
+				url: window.location.href
+			};
+			
+			getOption('commentEmbedURL', function (url) {
+				$('#' + eID).attr('src', expandTemplates(url, properties));
+			});
+			
+			return el;
+		});
 	}
 	
 	// Public
