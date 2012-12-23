@@ -7,8 +7,15 @@
 
 var OwnYourComments = (function () {
     // Private
+    var uniqIdCounter = 0;
     
     // Utility functions
+    
+    function uniq(prefix) {
+    	uniqIdCounter ++;
+    	return '' + prefix + uniqIdCounter;
+    }
+    
     function getOption(key, callback) {
         kango.invokeAsync('kango.storage.getItem', key, callback);
     }
@@ -37,7 +44,7 @@ var OwnYourComments = (function () {
      */
     function embedCommentsBox() {
         $('iframe[data-disqus-uid], div#disqus_thread').each(function (i, el) {
-            var insertID = 'own-your-comments-embed-' + $(el).attr('data-disqus-uid');
+            var insertID = uniq('own-your-comments-embed-');
             
             var insertFrame = $('<iframe />')
             	.attr('id', insertID)
