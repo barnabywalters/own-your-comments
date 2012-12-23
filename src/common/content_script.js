@@ -2,12 +2,12 @@
 // @name Own Your Comments
 // @include http://*
 // @include https://*
-// @require URI.js
 // @require jquery-1.8.3.min.js
 // ==/UserScript==
 
 var OwnYourComments = (function () {
     // Private
+    
     // Utility functions
     function getOption(key, callback) {
         kango.invokeAsync('kango.storage.getItem', key, callback);
@@ -61,4 +61,4 @@ var OwnYourComments = (function () {
     };
 }());
 
-OwnYourComments.init();
+window.setTimeout(1000, OwnYourComments.init);
