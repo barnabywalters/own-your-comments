@@ -6,7 +6,7 @@
 MyExtension.prototype = {
 
 	_onCommand: function() {
-		kango.browser.tabs.create({url: 'http://kangoextensions.com/'});
+		kango.ui.optionsPage.open();
 	}
 };
 

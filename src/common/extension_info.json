@@ -1,16 +1,16 @@
 {
   "content_scripts": [], 
-  "description": "Extension description", 
-  "creator": "KangoExtensions", 
-  "background_scripts": [
-    "main.js"
-  ], 
-  "homepage_url": "http://kangoextensions.com/", 
+  "description": "Own your comments on the web! Provides comment box hijacking so you can retain a copy of your comments on your own site.", 
+  "creator": "Barnaby Walters", 
+  "background_scripts": ["main.js"],
+  "content_scripts": ["content_script.js"],
+  "options_page": "options.html",
+  "homepage_url": "http://indiewebcamp.com/", 
   "version": "0.9", 
   "browser_button": {
-    "caption": "Kango", 
+    "caption": "OYC Config", 
     "icon": "icons/button.png", 
-    "tooltipText": "Kango"
+    "tooltipText": "Own Your Comments Config"
   }, 
   "name": "Own Your Comments"
 }
