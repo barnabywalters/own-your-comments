@@ -1,0 +1,11 @@
+<?xml version="1.0" ?><widget id="http://kangoextensions.com/extensions/ownyourcomments/" version="0.9" xmlns="http://www.w3.org/ns/widgets">
+	<name>Own Your Comments</name>
+	<description>Own your comments on the web! Provides comment box hijacking so you can retain a copy of your comments on your own site.</description>
+	<author href="http://indiewebcamp.com/">Barnaby Walters</author>
+	<update-description href=""/>
+	<icon src="icons/icon100.png"/>
+	<content src="background.html"/>
+	<access origin="*"/>
+	<feature name="opera:share-cookies"/>
+    <feature name="opera:contextmenus"/>
+</widget>

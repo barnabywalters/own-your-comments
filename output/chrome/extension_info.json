@@ -1,0 +1,21 @@
+{
+  "kango_version": "1.0.1 final", 
+  "content_scripts": [
+    "content_script.js"
+  ], 
+  "description": "Own your comments on the web! Provides comment box hijacking so you can retain a copy of your comments on your own site.", 
+  "creator": "Barnaby Walters", 
+  "background_scripts": [
+    "main.js"
+  ], 
+  "homepage_url": "http://indiewebcamp.com/", 
+  "version": "0.9", 
+  "options_page": "options.html", 
+  "browser_button": {
+    "caption": "OYC Config", 
+    "tooltipText": "Own Your Comments Config", 
+    "icon": "icons/button.png"
+  }, 
+  "id": "{C5F5B8CE-FB6C-47CD-BDC7-92B8FD7A8BF6}", 
+  "name": "Own Your Comments"
+}

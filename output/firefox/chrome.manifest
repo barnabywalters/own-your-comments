@@ -1,0 +1,3 @@
+content OwnnYournComments_kango chrome/content/
+overlay chrome://browser/content/browser.xul chrome://OwnnYournComments_kango/content/content.xul
+resource OwnnYournComments_kango chrome/content/
