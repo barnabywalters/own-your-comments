@@ -48,5 +48,5 @@ In the URL you can use <code>{url}</code> as a placeholder for the URL of the pa
 
 Once everything’s set up, you should start seeing things like this happening:
 
-![A custom comments box before a Disqus one](img/disqus.png)
-![A custom comments box before a Livefyre one](img/livefyre.png)
+![A custom comments box before a Disqus one](https://github.com/barnabywalters/own-your-comments/tree/master/img/disqus.png)
+![A custom comments box before a Livefyre one](https://github.com/barnabywalters/own-your-comments/tree/master/img/livefyre.png)
