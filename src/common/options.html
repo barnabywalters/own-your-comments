@@ -8,11 +8,15 @@
     	font-size: 18px;
     }
     
-    input[type=url] {
+    input[type=url],
+    input[type=text],
+    input {
     	font-size: 18px;
-    	width: 50em;
+    	width: 30em;
     	max-width: 100%;
     }
+    
+    input.short { width: auto; }
     
     .notice {
     	color: green;
@@ -49,9 +53,11 @@
 		
 		<label><b>Disqus/Livefyre Embed URL</b> ⇒ <input id="commentEmbedURL" type="url" class="monitor" placeholder="http://example.org/notes/new?inReplyTo={url}" /></label>
 		
+		<label><b title="CSS height string">Height:</b> <input class="short" id="commentEmbedHeight" class="monitor" placeholder="5em"</b>
+		
 		<div class="metadata">
 			<div class="notes">
-				<p>Disqus and Livefyre comments boxes are embedded in the page in a way which makes it very difficult to hijack the actual box, so instead we can embed your own comments box just above it</p>
+				<p>Disqus and Livefyre comments boxes are embedded in the page in a way which makes it very difficult to hijack the actual box, so instead we can embed your own comments box just above it. The iframe has width of 100%, and you can set the height.</p>
 			</div>
 			<dl class="templates">
 				<dt><code>{url}</code>
